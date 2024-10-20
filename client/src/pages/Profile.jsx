@@ -132,19 +132,7 @@ const Profile = () => {
                             </div>
                         </div>
 
-                        {/* User stats */}
-                        <div className="mt-8 grid grid-cols-2 gap-4 text-left">
-                            <div>
-                                <p><strong>Total Logins:</strong> {userProfile.totallogin}</p>
-                                <p><strong>Last Login:</strong> {new Date(userProfile.lastlogin).toLocaleDateString()}</p>
-                                <p><strong>Subscription:</strong> {userProfile.subscription ? 'Active' : 'Inactive'}</p>
-                            </div>
-                            <div>
-                                <p><strong>Friends:</strong> {userProfile.friendsnum}</p>
-                                <p><strong>Families:</strong> {userProfile.familynum}</p>
-                                <p><strong>Clubs:</strong> {userProfile.clubnum}</p>
-                            </div>
-                        </div>
+                    
 
                         <div className="mt-6 grid grid-cols-2 gap-4 text-left">
                             <div>
