@@ -7,10 +7,21 @@ import { IconContext } from 'react-icons';
 
 function Navbar() {
     const [sidebar, setSidebar] = useState(false);
-    const userid = localStorage.getItem("userid"); // Get logged-in user ID
-
+    const [userid, setUserid] = useState(localStorage.getItem("userid")); // Initialize from localStorage
     const showSidebar = () => setSidebar(!sidebar);
+    useEffect(() => {
+        const handleStorageChange = () => {
+            setUserid(localStorage.getItem("userid")); // Update state when userid changes
+        };
 
+        // Listen for changes to localStorage
+        window.addEventListener('storage', handleStorageChange);
+
+        // Cleanup the event listener
+        return () => {
+            window.removeEventListener('storage', handleStorageChange);
+        };
+    }, []);
     return (
         <>
             <IconContext.Provider value={{ color: '#fff' }}>
