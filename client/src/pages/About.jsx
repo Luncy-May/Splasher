@@ -8,48 +8,26 @@ const About = () => {
   const username = localStorage.getItem("username");
   const userid = localStorage.getItem("userid");
 
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false)
   const [isLoggedIn, setIsLoggedIn] = useState((userid !== null && userid !== undefined && userid !== ""));
-  const [isSkipped, setIsSkipped] = useState(false);  // New state to track if animation is skipped
-
   useEffect(() => {
-    if (!isSkipped) {  // Only run the animation if not skipped
-      const intervalId = setInterval(() => {
-        if (index < introText.length) {
-          setText((prev) => prev + introText[index]);
-          setIndex(index + 1);
-        } else {
-          clearInterval(intervalId);
-        }
-      }, 50);
-      return () => clearInterval(intervalId);
-    }
-  }, [index, text, introText, isSkipped]);
-
-  // Skip the animation and display the full text
-  const handleSkip = () => {
-    setIsSkipped(true);
-    setText(introText);
-  };
-
+    const intervalId = setInterval(() => {
+      if (index < introText.length) {
+        setText(text + introText[index]);
+        setIndex(index + 1);
+      } else {
+        clearInterval(intervalId);
+      }
+    }, 50);
+    return () => clearInterval(intervalId);
+  }, [index, text, introText]);
   if (isLoading) {
     return <p className='text-2xl font-bold text-center'>Loading...</p>;
   }
-
   return (
-    <div className="text-2xl font-serif text-white pl-[10vw] space-y-10 p-3 mt-[5vh] overflow-hidden">
-      <div className='pt-5 space-y-5 text-2xl flex flex-col items-center justify-center'>About</div>
+    <div className="text-4xl font-serif text-white pl-[10vw] space-y-10 p-3 mt-[5vh] overflow-hidden">
+    <div className='pt-5 space-y-5 text-4xl flex flex-col items-center justify-center'>About</div>
       <span className="text-gray-800">{text}</span>
-
-      {/* Skip Button */}
-      {!isSkipped && (
-        <button
-          onClick={handleSkip}
-          className="mt-5 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700"
-        >
-          Skip
-        </button>
-      )}
     </div>
   );
 };
