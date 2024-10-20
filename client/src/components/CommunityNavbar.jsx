@@ -26,18 +26,6 @@ const CommunityNavbar = () => {
                 <div>
                     <Link to={`/community/gallery/${userid}`}>Gallery</Link>
                 </div>
-                <div>
-                    <Link to={`/community/findClubs/${userid}`}>Find Clubs</Link>
-                </div>
-                <div>
-                    <Link to={`/community/findFriends/${userid}`}>Find Friends</Link>
-                </div>
-                <div>
-                    <Link to={`/community/Feed/${userid}`}>Feed</Link>
-                </div>
-                <div>
-                    <Link to={`/community/Activities/${userid}`}>Activities</Link>
-                </div>
             </nav>
         </div>
     )

@@ -27,10 +27,6 @@ const Community = ({ Darkmode }) => {
                     {isLoggedIn ? (
                         <>
                             <Route path="gallery/:userid" element={<Gallery />} />
-                            <Route path="findFriends/:userid" element={<FindFriends />} />
-                            <Route path="findClubs/:userid" element={<FindClubs />} />
-                            <Route path="activities/:userid" element={<Activities />} />
-                            <Route path="feed/:userid" element={<Feed />} />
                         </>
                     ) : (
                         <Route path="/" element={<Reel />} />
