@@ -52,6 +52,7 @@ const Profile = () => {
         localStorage.removeItem("userid");
         alert('Successfully logged out');
         navigate("/login");
+        window.location.reload();
     };
     async function getLocationInfo(latitude, longitude) {
         try {
