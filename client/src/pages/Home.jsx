@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import DisplayGrid from '../components/DisplayGrid';
 import { StateImages } from '../components';
 import NotAuthorizedPage from './NotAuthorizedPage';
-
+import About from './About';
 const Home = ({ Darkmode }) => {
     const username = localStorage.getItem("username");
     const userid = localStorage.getItem("userid");
@@ -18,10 +18,7 @@ const Home = ({ Darkmode }) => {
 
             {/* Main Content */}
             {isLoggedIn ? (
-                <div className="flex-grow flex justify-center items-center overflow-x-auto">
-                    {/* Ensure DisplayGrid is constrained horizontally */}
-                        <DisplayGrid listOfItems={StateImages} />
-                </div>
+                <About />
             ) : (
                 <div className="flex-grow flex flex-col items-center justify-center">
                     <NotAuthorizedPage />
