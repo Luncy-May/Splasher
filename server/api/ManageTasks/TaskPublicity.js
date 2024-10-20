@@ -1,7 +1,7 @@
 import { pool } from "../database/index.js";
 
 export async function TaskPublicity(request, res) {
-    const { taskID, creatorID, userid } = request.body;
+    const { taskid, creatorID, userid } = request.body;
     const client = await pool.connect();
     if (creatorID !== userid) {
         return res.send({
@@ -13,7 +13,7 @@ export async function TaskPublicity(request, res) {
         // Check the current publicity status of the task
         const closeQuery = {
             text: 'SELECT publicity FROM tasks WHERE taskid = $1',
-            values: [taskID],
+            values: [taskid],
         };
 
         const closeResult = await client.query(closeQuery);
@@ -24,7 +24,7 @@ export async function TaskPublicity(request, res) {
         // Update the task to make it private
         const updateQuery = {
             text: 'UPDATE tasks SET publicity = $1 WHERE taskid = $2',
-            values: [reverse, taskID],
+            values: [reverse, taskid],
         };
 
         await client.query(updateQuery);
