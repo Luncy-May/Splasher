@@ -39,6 +39,7 @@ export default function Login() {
                 localStorage.setItem("userid", data.userid);
                 localStorage.setItem("username", data.username);
                 navigate("/");
+                window.location.reload();
             } else {
                 setError(data.message);
             }
