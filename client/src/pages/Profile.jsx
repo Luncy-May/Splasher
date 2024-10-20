@@ -26,7 +26,7 @@ const Profile = () => {
     const fetchProfileData = async () => {
         setIsLoading(true);
         try {
-            const response = await fetch(`http://localhost:8080/get-profile/${userid}`, {
+            const response = await fetch(`http://ec2-3-128-87-197.us-east-2.compute.amazonaws.com:8080/get-profile/${userid}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -55,7 +55,7 @@ const Profile = () => {
     };
     async function getLocationInfo(latitude, longitude) {
         try {
-            const response = await fetch(`http://localhost:8080/api/location?latitude=${latitude}&longitude=${longitude}`);
+            const response = await fetch(`http://ec2-3-128-87-197.us-east-2.compute.amazonaws.com:8080/api/location?latitude=${latitude}&longitude=${longitude}`);
             const data = await response.json();
 
             if (response.ok) {

@@ -21,7 +21,7 @@ const Task = ({
         e.preventDefault();
         let data
         try {
-            const response = await fetch('http://localhost:8080/task-favorite', {
+            const response = await fetch('http://ec2-3-128-87-197.us-east-2.compute.amazonaws.com:8080/task-favorite', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -45,7 +45,7 @@ const Task = ({
         e.preventDefault();
         let data
         try {
-            const response = await fetch('http://localhost:8080/task-done', {
+            const response = await fetch('http://ec2-3-128-87-197.us-east-2.compute.amazonaws.com:8080/task-done', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -69,7 +69,7 @@ const Task = ({
         e.preventDefault();
         let data
         try {
-            const response = await fetch('http://localhost:8080/task-publicity', {
+            const response = await fetch('http://ec2-3-128-87-197.us-east-2.compute.amazonaws.com:8080/task-publicity', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

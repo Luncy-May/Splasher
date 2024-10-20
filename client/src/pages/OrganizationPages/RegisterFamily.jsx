@@ -22,7 +22,7 @@ export default function RegisterFamily() {
         const time = new Date()
         setCreatedAt(time)
         try {
-            const response = await fetch('http://localhost:8080/Register', {
+            const response = await fetch('http://ec2-3-128-87-197.us-east-2.compute.amazonaws.com:8080/Register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

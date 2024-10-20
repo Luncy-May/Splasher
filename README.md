@@ -96,7 +96,7 @@ Splasher/
 Once both the client and server are running, open your browser and navigate to (default 5173):
 
 ```
-http://localhost:5173
+http://ec2-3-128-87-197.us-east-2.compute.amazonaws.com:5173
 ```
 
 You can now start exploring eco-friendly activities based on your budget, or interact with the AI chat widget for personalized suggestions.

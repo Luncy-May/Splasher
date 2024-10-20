@@ -36,7 +36,7 @@ const Plan = ({
         e.preventDefault();
         let data;
         try {
-            const response = await fetch('http://localhost:8080/plan-favorite', {
+            const response = await fetch('http://ec2-3-128-87-197.us-east-2.compute.amazonaws.com:8080/plan-favorite', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ planID, creatorID, userid }),
@@ -57,7 +57,7 @@ const Plan = ({
         e.preventDefault();
         let data;
         try {
-            const response = await fetch('http://localhost:8080/plan-done', {
+            const response = await fetch('http://ec2-3-128-87-197.us-east-2.compute.amazonaws.com:8080/plan-done', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ planID, creatorID, userid }),
@@ -77,7 +77,7 @@ const Plan = ({
         e.preventDefault();
         let data;
         try {
-            const response = await fetch('http://localhost:8080/plan-publicity', {
+            const response = await fetch('http://ec2-3-128-87-197.us-east-2.compute.amazonaws.com:8080/plan-publicity', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ planID, creatorID, userid }),

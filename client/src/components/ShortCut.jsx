@@ -18,7 +18,7 @@ const ShortCut = ({ Darkmode }) => {
 
         try {
             // Send the message to the AI backend
-            const response = await fetch('http://localhost:8080/ask-ai', {
+            const response = await fetch('http://ec2-3-128-87-197.us-east-2.compute.amazonaws.com:8080/ask-ai', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ prompt: inputMessage }),

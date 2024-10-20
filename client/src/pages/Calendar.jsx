@@ -25,7 +25,7 @@ const Calendar = () => {
     const fetchPlansData = async () => {
         setIsLoading(true);
         try {
-            const response = await fetch(`http://localhost:8080/view-all-plans/${userid}`, {
+            const response = await fetch(`http://ec2-3-128-87-197.us-east-2.compute.amazonaws.com:8080/view-all-plans/${userid}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -49,7 +49,7 @@ const Calendar = () => {
     const fetchTasksData = async () => {
         setIsLoading(true);
         try {
-            const response = await fetch(`http://localhost:8080/view-all-tasks/${userid}`, {
+            const response = await fetch(`http://ec2-3-128-87-197.us-east-2.compute.amazonaws.com:8080/view-all-tasks/${userid}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',

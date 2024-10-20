@@ -73,7 +73,7 @@ const TaskForm = ({ creatorID, creatorName, userid, planID }) => {
     };
     console.log(taskData)
     try {
-      const response = await fetch('http://localhost:8080/add-task', {
+      const response = await fetch('http://ec2-3-128-87-197.us-east-2.compute.amazonaws.com:8080/add-task', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

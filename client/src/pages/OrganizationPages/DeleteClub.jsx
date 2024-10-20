@@ -25,7 +25,7 @@ const DeleteClub = () => {
         const time = new Date()
         const getProfile = async () => {
             try {
-                const response = await fetch(`http://localhost:8080/GetProfile/${userid}`, {
+                const response = await fetch(`http://ec2-3-128-87-197.us-east-2.compute.amazonaws.com:8080/GetProfile/${userid}`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

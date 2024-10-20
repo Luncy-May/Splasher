@@ -26,7 +26,7 @@ const Dashboard = () => {
     const fetchDashboardData = async () => {
         setIsLoading(true);
         try {
-            const response = await fetch(`http://localhost:8080/get-dashboard/${userid}`, {
+            const response = await fetch(`http://ec2-3-128-87-197.us-east-2.compute.amazonaws.com:8080/get-dashboard/${userid}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',

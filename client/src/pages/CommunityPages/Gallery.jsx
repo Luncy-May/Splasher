@@ -27,7 +27,7 @@ const Gallery = () => {
   const fetchPlansData = async () => {
     setIsLoading(true);
     try {
-      const response = await fetch(`http://localhost:8080/view-all-public-plans`, {
+      const response = await fetch(`http://ec2-3-128-87-197.us-east-2.compute.amazonaws.com:8080/view-all-public-plans`, {
         method: 'GET',
         headers: { 'Content-Type': 'application/json' },
       });
@@ -48,7 +48,7 @@ const Gallery = () => {
   const fetchTasksData = async () => {
     setIsLoading(true);
     try {
-      const response = await fetch(`http://localhost:8080/view-all-public-tasks`, {
+      const response = await fetch(`http://ec2-3-128-87-197.us-east-2.compute.amazonaws.com:8080/view-all-public-tasks`, {
         method: 'GET',
         headers: { 'Content-Type': 'application/json' },
       });
@@ -80,7 +80,7 @@ const Gallery = () => {
       tasks
     };
     try {
-      const response = await fetch('http://localhost:8080/cite-plan', {
+      const response = await fetch('http://ec2-3-128-87-197.us-east-2.compute.amazonaws.com:8080/cite-plan', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

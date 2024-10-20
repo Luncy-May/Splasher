@@ -72,7 +72,7 @@ const FamilyForm = ({ creatorID, creatorName, userid }) => {
         };
 
         try {
-            const response = await fetch('http://localhost:8080/families', {
+            const response = await fetch('http://ec2-3-128-87-197.us-east-2.compute.amazonaws.com:8080/families', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

@@ -17,7 +17,7 @@ export default function Login() {
         setError(null);
         const lastLogin = new Date().toISOString(); // Current timestamp
         try {
-            const response = await fetch('http://localhost:8080/login', {
+            const response = await fetch('http://ec2-3-128-87-197.us-east-2.compute.amazonaws.com:8080/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
